@@ -6,7 +6,7 @@
 
   tasks:
     - name: Collect the current configuration from the Juniper SRX1500
-      juniper_junos_config:
+      junipernetworks.junos:
         provider:
           host: "10.254.16.8"
           username: "junadmin"
