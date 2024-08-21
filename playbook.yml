@@ -1,0 +1,14 @@
+---
+- name: "Get Junos OS configuration"
+  hosts: junos-all
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: "Get committed configuration"
+      juniper.device.config:
+        retrieve: "committed"
+      register: response
+    - name: "Print result"
+      debug:
+        var: response
