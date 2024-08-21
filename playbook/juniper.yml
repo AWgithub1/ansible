@@ -1,10 +1,7 @@
 - name: Retrieve Active Configuration from Juniper SRX1500
-  hosts: juniper_firewalls
   gather_facts: no
   connection: local  # Use local connection to interact with the Junos device
-
   tasks:
-    - name: Collect the current configuration from the Juniper SRX1500
       junipernetworks.junos:
         provider:
           host: "10.254.16.8"
