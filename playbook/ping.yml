@@ -1,4 +1,4 @@
-- name: Ping host 10.254.17.10
+- name: Ping host 10.254.16.8
   hosts: target_host
   connection: ssh
 
@@ -11,4 +11,4 @@
 
   vars:
     target_host:
-      ansible_host: 10.254.17.10
+      ansible_host: 10.254.16.8
