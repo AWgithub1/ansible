@@ -1,18 +1,14 @@
-- name: Retrieve Active Configuration from Juniper SRX1500
+---
+- name: "Get Junos OS configuration"
+  hosts: junos-all
+  connection: local
   gather_facts: no
-  connection: local  # Use local connection to interact with the Junos device
-  tasks:
-      junipernetworks.junos:
-        provider:
-          host: "10.254.16.8"
-          username: "junadmin"
-          password: "20lancer"
-          port: 22
-        format: text
-        retrieve: committed
-      register: junos_config
 
-    - name: Save the configuration to a local file
-      copy:
-        content: "{{ junos_config.stdout }}"
-        dest: "./configs/{{ inventory_hostname }}_config.txt"
+  tasks:
+    - name: "Get candidate configuration"
+      juniper.device.config:
+        retrieve: "candidate"
+      register: response
+    - name: "Print result"
+      debug:
+        var: response
