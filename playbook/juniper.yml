@@ -2,7 +2,7 @@
 - name: Pull running config from SRX1500
   hosts: 10.254.16.8
   gather_facts: no
-  connection: network_cli
+  connection: ssh
   vars:
     ansible_network_os: junos
     ansible_user: junadmin
