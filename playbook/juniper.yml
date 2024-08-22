@@ -1,6 +1,6 @@
 ---
 - name: Pull running config from SRX1500
-  hosts: juniper_srx
+  hosts: 10.254.16.8
   gather_facts: no
   connection: network_cli
 
