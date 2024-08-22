@@ -1,14 +1,16 @@
 ---
-- name: "Get Junos OS configuration"
-  hosts: junos-all
-  connection: local
+- name: Pull running config from SRX1500
+  hosts: juniper_srx
   gather_facts: no
+  connection: network_cli
 
   tasks:
-    - name: "Get candidate configuration"
-      juniper.device.config:
-        retrieve: "candidate"
-      register: response
-    - name: "Print result"
-      debug:
-        var: response
+    - name: Retrieve the running configuration
+      junipernetworks.junos.junos_command:
+        commands: "show configuration"
+      register: running_config
+
+    - name: Save the configuration to a file
+      copy:
+        content: "{{ running_config.stdout[0] }}"
+        dest: "srx1500_running_config.txt"
