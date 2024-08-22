@@ -1,4 +1,4 @@
-- name: Ping host 10.254.16.8
+- name: Ping host 10.254.17.10
   hosts: target_host
   connection: ssh
 
@@ -6,7 +6,7 @@
     - name: Ping the target host
       ping:
         host: 10.254.16.8
-        count: 5
+        count: 1000
         interval: 1
 
   vars:
