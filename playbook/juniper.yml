@@ -1,5 +1,5 @@
 ---
-- name: Pull running config from SRX1500
+- name: Pull running config from EX
   hosts: all
   gather_facts: no
   connection: network_cli
