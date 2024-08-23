@@ -1,6 +1,6 @@
 ---
 - name: Pull running config from SRX1500
-  hosts:
+  hosts:10.254.17.10
   gather_facts: no
   connection: network_cli
   vars:
