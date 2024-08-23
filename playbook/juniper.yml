@@ -1,6 +1,6 @@
 ---
 - name: Pull running config from SRX1500
-  hosts: ansible_host
+  hosts: all
   gather_facts: no
   connection: network_cli
   tasks:
