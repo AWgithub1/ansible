@@ -1,10 +1,14 @@
 ---
 - name: Pull running config from SRX1500
+  hosts:
   gather_facts: no
-  connection: ssh
+  connection: network_cli
   vars:
     ansible_network_os: junos
+    ansible_user:
+    ansible_password:
     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
   tasks:
     - name: Retrieve the running configuration
       junipernetworks.junos.junos_command:
