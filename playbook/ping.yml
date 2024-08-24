@@ -1,14 +1,14 @@
 - name: Ping host 10.254.17.10
-  hosts: webstack
+  hosts: pingstack
   connection: ssh
 
   tasks:
     - name: Ping the target host
       ping:
-        host: webstack
+        host: 10.254.17.10
         count: 1000
         interval: 1
 
   vars:
     webstack:
-      ansible_host: webstack
+      ansible_host: 10.254.17.10
