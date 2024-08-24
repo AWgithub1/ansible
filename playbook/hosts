@@ -1,0 +1,5 @@
+[pinghosts]
+10.254.17.10
+
+[pingstack:children]
+pinghosts
