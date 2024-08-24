@@ -5,10 +5,10 @@
   tasks:
     - name: Ping the target host
       ping:
-        host: 10.254.17.10
+        host: webstack
         count: 1000
         interval: 1
 
   vars:
     webstack:
-      ansible_host: 10.254.17.10
+      ansible_host: webstack
