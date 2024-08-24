@@ -1,5 +1,5 @@
 [pinghosts]
-10.254.17.10
+192.168.88.131
 
 [pingstack:children]
 pinghosts
