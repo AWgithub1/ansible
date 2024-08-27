@@ -12,4 +12,4 @@
     - name: Save the configuration to a file
       copy:
         content: "{{ running_config.stdout[0] }}"
-        dest: "{{ runner }}/{{ project }}/{{ EX_running_config.txt }}"
+        dest: "srx1500_running_config.txt"
