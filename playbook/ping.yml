@@ -1,5 +1,5 @@
 - name: Ping host 192.168.88.131
-  hosts: pingstack
+  hosts: 192.168.88.131
   connection: ssh
 
   tasks:
