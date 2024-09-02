@@ -4,10 +4,11 @@
 
   tasks:
     - name: Ping the target host
-      ping:
-        host: 192.168.88.131
-        count: 1000
-        interval: 1
+      ansible.builtin.ping:
+      #ping:
+        #host: 192.168.88.131
+        #count: 1000
+        #interval: 1
 
   vars:
     pingstack:
