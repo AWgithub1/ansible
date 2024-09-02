@@ -1,6 +1,6 @@
 - name: Ping host 192.168.88.131
   hosts: 192.168.88.131
-  connection: icmp
+  connection: ssh
 
   tasks:
     - name: Ping the target host
