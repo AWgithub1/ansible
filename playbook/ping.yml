@@ -1,5 +1,5 @@
-- name: Ping host 192.168.88.131
-  hosts: 192.168.88.131
+- name: Ping host 10.254.17.10
+  hosts: 10.254.17.10
   connection: ssh
 
   tasks:
@@ -10,6 +10,6 @@
         #count: 1000
         #interval: 1
 
-  vars:
-    pingstack:
-      ansible_host: 192.168.88.131
+  #vars:
+    #pingstack:
+      #ansible_host: 10.254.17.10
