@@ -1,5 +1,6 @@
 - name: Ping host 10.254.17.10
-  hosts: 10.254.17.10
+  #hosts: 10.254.17.10
+  hosts: localhost
   connection: ssh
 
   tasks:
