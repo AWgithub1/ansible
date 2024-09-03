@@ -6,10 +6,23 @@
   tasks:
     - name: Ping the target host
       ansible.builtin.ping:
+      register: ping_result
       #ping:
         #host: 192.168.88.131
         #count: 1000
         #interval: 1
+        
+    - name: Show ping result
+      ansible.builtin.debug:
+        msg: "Ping response: {{ ping_result }}"
+
+      
+      #ping:
+        #host: 192.168.88.131
+        #count: 1000
+        #interval: 1
+
+    
 
   #vars:
     #pingstack:
