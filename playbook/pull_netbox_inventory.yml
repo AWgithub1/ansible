@@ -4,7 +4,7 @@
      tasks:
        - name: Get Juniper devices from NetBox
          netbox.netbox.netbox_device:
-           netbox_url: "{{https://bmr-er-ops.int.bell.ca/ipshack-DEV/}}"
+           netbox_url: "{{ https://bmr-er-ops.int.bell.ca/ipshack-DEV/ }}"
            netbox_token: "{{41721a2989f226d6646a426939de5b30d187c8db}}"
            validate_certs: false
            data:
