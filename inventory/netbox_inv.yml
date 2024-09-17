@@ -1,0 +1,6 @@
+plugin: netbox
+api_endpoint: http://netbox.example.com/api/
+token: your-netbox-api-token
+validate_certs: false  # Set to true if you have valid SSL certificates
+filter:
+  device_type: 'Juniper EX 4300'  # Only fetch Juniper EX 4300 devices
