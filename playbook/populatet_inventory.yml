@@ -1,0 +1,7 @@
+- name: Populate NetBox Inventory for Juniper EX 4300
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Display Juniper EX 4300 inventory hosts from NetBox
+      debug:
+        msg: "Inventory host: {{ inventory_hostname }}"
