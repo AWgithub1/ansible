@@ -1,5 +1,5 @@
 - name: Ping host 10.254.16.8
-  hosts: target_host
+  hosts: localhost
   connection: ssh
 
   tasks:
