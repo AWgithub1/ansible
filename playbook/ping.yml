@@ -1,5 +1,5 @@
-- name: Ping host 10.254.17.10
-  #hosts: 10.254.17.10
+- name: Ping host 192.168.88.131
+  #hosts: 192.168.88.131
   hosts: localhost
   connection: ssh
 
